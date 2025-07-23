@@ -72,6 +72,34 @@ const projects: Project[] = [
       </div>
     ),
   },
+  {
+    name: "expressoes matematicas",
+    description:
+      "The project is a C++ implementation of a mathematical expression calculator. It includes features for validating and solving complex expressions in both infix and postfix notation. The program can handle parentheses, multiple operators and operands, and expressions up to 1000 characters. It verifies expression validity, converts between notations, and solves them using a simple interface.",
+    url: "https://github.com/iagoalvess/expressoesMatematicas",
+    githubUrl: "https://github.com/iagoalvess/expressoesMatematicas",
+    technologies: (
+      <div className="flex items-center gap-x-3">
+        <span className="rounded-full bg-[#00D8FE] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          C++
+        </span>
+      </div>
+    ),
+  },
+  {
+    name: "RIP over UDP",
+    description:
+      "The project is a dynamic routing system based on the RIP protocol over UDP, developed in Python to simulate real routing behavior between multiple routers.",
+    url: "https://github.com/iagoalvess/UDPRIP",
+    githubUrl: "https://github.com/iagoalvess/UDPRIP",
+    technologies: (
+      <div className="flex items-center gap-x-3">
+        <span className="rounded-full bg-[#00D8FE] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          Python
+        </span>
+      </div>
+    ),
+  },
 ];
 
 function ProjectCard({

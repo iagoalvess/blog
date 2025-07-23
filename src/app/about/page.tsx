@@ -11,11 +11,11 @@ export default function AboutPage() {
           which taught me a lot about discipline and perseverance.
         </p>
         <p>
-          Since a young age, I’ve been fascinated by computers and technology. 
+          Since a young age, I&apos;ve been fascinated by computers and technology. 
           My natural curiosity and enjoyment in solving problems led me to pursue a career in this field.
         </p>
         <p>
-          I&aposm currently in the 8th semester of my Information Systems degree at{" "}
+          I&apos;m currently in the 8th semester of my Information Systems degree at{" "}
           <a
             href="https://ufmg.br/"
             target="_blank"
@@ -36,14 +36,14 @@ export default function AboutPage() {
           Today, I&aposm a Software Development Intern at{" "}
           <strong>Group Software</strong>, focusing on backend and system integrations. 
           I work on maintaining and evolving complex systems, developing new features, 
-          and fixing bugs using technologies like Java, C#, and SQL Server.
+          and fixing bugs using technologies like Java, Spring, C#, and SQL Server.
         </p>
         <p>
-          I’m a growing professional who proactively seeks new challenges, constantly improving 
+          I&apos;m a growing professional who proactively seeks new challenges, constantly improving 
           my skills through study and personal projects.
         </p>
         <p>
-          If you’d like to get in touch, find me on{" "}
+          If you&apos;d like to get in touch, find me on{" "}
           <a
             href="https://www.linkedin.com/in/iago-alvess"
             target="_blank"
