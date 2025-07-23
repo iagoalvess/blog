@@ -1,15 +1,15 @@
-# Clone este repositório
+## Clone este repositório
 git clone https://github.com/iagoalvess/blog
 
-# Acesse a pasta do projeto
+## Acesse a pasta do projeto
 cd seu-repositorio
 
-# Instale as dependências
+## Instale as dependências
 npm install
-# ou
+## ou
 yarn install
 
-# Inicie o servidor de desenvolvimento
+## Inicie o servidor de desenvolvimento
 npm run dev
-# ou
+## ou
 yarn dev
