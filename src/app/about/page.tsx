@@ -7,7 +7,7 @@ export default function AboutPage() {
       <article className="space-y-4">
         <p>
           I was born in Santa Bárbara, MG, and moved to Belo Horizonte to pursue my studies. 
-          I&aposve always been passionate about sports, having competed in mountain biking and motocross, 
+          I&apos;ve always been passionate about sports, having competed in mountain biking and motocross, 
           which taught me a lot about discipline and perseverance.
         </p>
         <p>
@@ -33,7 +33,7 @@ export default function AboutPage() {
           build dashboards, automate processes, manage projects, and interact directly with clients.
         </p>
         <p>
-          Today, I&aposm a Software Development Intern at{" "}
+          Today, I&apos;m a Software Development Intern at{" "}
           <strong>Group Software</strong>, focusing on backend and system integrations. 
           I work on maintaining and evolving complex systems, developing new features, 
           and fixing bugs using technologies like Java, Spring, C#, and SQL Server.
