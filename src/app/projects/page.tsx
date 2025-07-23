@@ -11,7 +11,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "bolão brasileirão",
+    name: "brazilian league pool",
     description:
       "The system is an interactive platform for football betting, where users join groups and earn points based on the accuracy of their predictions. Participants are ranked, and the platform also offers detailed stats and a live football news feed, making the experience more dynamic and engaging for sports fans.",
     url: "https://bolao-brasileirao.vercel.app/",
@@ -45,7 +45,7 @@ const projects: Project[] = [
     ),
   },
   {
-    name: "fecho convexo",
+    name: "convex hull",
     description:
       "This C++ project processes 2D point data to compute the convex hull of a point set using Graham's or Jarvis's algorithms. Points are read from a text file, and for Graham's method, the user can choose between InsertionSort, MergeSort, or BucketSort.",
     url: "https://github.com/iagoalvess/fechoConvexo",
@@ -73,7 +73,7 @@ const projects: Project[] = [
     ),
   },
   {
-    name: "expressoes matematicas",
+    name: "math expressions",
     description:
       "The project is a C++ implementation of a mathematical expression calculator. It includes features for validating and solving complex expressions in both infix and postfix notation. The program can handle parentheses, multiple operators and operands, and expressions up to 1000 characters. It verifies expression validity, converts between notations, and solves them using a simple interface.",
     url: "https://github.com/iagoalvess/expressoesMatematicas",
