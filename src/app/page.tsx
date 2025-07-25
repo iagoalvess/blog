@@ -86,9 +86,9 @@ export default function HomePage() {
   return (
     <div className="flex flex-col gap-6">
       <p className="text-sm">
-        Information Systems student at UFMG with a solid background in software development 
-        and growing interest in data analysis. Currently interning at Group Software, focusing 
-        on backend and system integrations. Always eager to learn and take on new challenges.
+        Information Systems student at UFMG with a solid background in software development. 
+        Currently interning at Group Software, focusing on backend and system integrations. 
+        Always eager to learn and take on new challenges.
       </p>
       <div className="divide-y divide-zinc-400 overflow-hidden rounded ring-1 ring-zinc-400 dark:divide-zinc-500 dark:ring-zinc-500">
         {externalLinks.map((link: Link) => (

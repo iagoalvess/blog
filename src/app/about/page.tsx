@@ -23,8 +23,7 @@ export default function AboutPage() {
           >
             Federal University of Minas Gerais (UFMG)
           </a>
-          . My academic journey has given me a strong foundation in software development 
-          and sparked a deep interest in data analysis.
+          . My academic journey has given me a strong foundation in software development.
         </p>
         <p>
           My professional path began at{" "}
