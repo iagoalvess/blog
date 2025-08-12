@@ -11,6 +11,26 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: "our-places",
+    description:
+      "A Java backend API built with Spring for relationship management. Designed for couples, it allows saving and rating visited places, storing important dates, and managing shared memories. Also developed the web frontend for the project.",
+    url: "https://github.com/iagoalvess/race-manager-api",
+    githubUrl: "https://github.com/iagoalvess/our-places-api",
+    technologies: (
+      <div className="flex items-center gap-x-3">
+        <span className="rounded-full bg-[#E89F3E] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          Java
+        </span>
+        <span className="rounded-full bg-[#6DB33F] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          Spring
+        </span>
+        <span className="rounded-full bg-[#6DB33F] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          Next.js
+        </span>
+      </div>
+    ),
+  },
+  {
     name: "race-manager-api",
     description:
       "A Java backend API built with Spring for race management. Designed for organizers, it allows creating championships and categories, adding participants, recording finish times, and accessing results.",
