@@ -14,7 +14,7 @@ const projects: Project[] = [
     name: "our-places",
     description:
       "A Java backend API built with Spring for relationship management. Designed for couples, it allows saving and rating visited places, storing important dates, and managing shared memories. Also developed the web frontend for the project.",
-    url: "https://github.com/iagoalvess/race-manager-api",
+    url: "https://ourplaceslive.vercel.app/",
     githubUrl: "https://github.com/iagoalvess/our-places-api",
     technologies: (
       <div className="flex items-center gap-x-3">
