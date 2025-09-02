@@ -48,6 +48,26 @@ const projects: Project[] = [
     ),
   },
   {
+    name: "user-service/email-service",
+    description:
+      "A backend application for user registration built with a microservices architecture. It includes a User Service to handle new user creation and an Email Service to send a welcome notification upon successful registration.",
+    url: "https://github.com/iagoalvess/user-service",
+    githubUrl: "https://github.com/iagoalvess/email-service",
+    technologies: (
+      <div className="flex items-center gap-x-3">
+        <span className="rounded-full bg-[#E89F3E] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          Java
+        </span>
+        <span className="rounded-full bg-[#6DB33F] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          Spring
+        </span>
+        <span className="rounded-full bg-[#6DB33F] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          RabbitMQ
+        </span>
+      </div>
+    ),
+  },
+  {
     name: "brazilian league pool",
     description:
       "The system is an interactive platform for football betting, where users join groups and earn points based on the accuracy of their predictions. Participants are ranked, and the platform also offers detailed stats and a live football news feed, making the experience more dynamic and engaging for sports fans.",
