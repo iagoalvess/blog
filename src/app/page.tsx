@@ -82,6 +82,84 @@ const ExternalLink = (link: Link) => {
   );
 };
 
+interface TimelineItem {
+  title: string;
+  subtitle: string;
+  period: string;
+  active?: boolean;
+}
+
+const timelineItems: TimelineItem[] = [
+  {
+    title: "Information Systems",
+    subtitle: "UFMG",
+    period: "2022 - Present",
+  },
+  {
+    title: "Project Analyst",
+    subtitle: "Pi Júnior - UFMG",
+    period: "2024 - 2025",
+  },
+  {
+    title: "Intern",
+    subtitle: "Group Software",
+    period: "2024 - 2025",
+  },
+  {
+    title: "Software Engineer",
+    subtitle: "Group Software",
+    period: "2026 - Present",
+    active: true,
+  },
+];
+
+const Timeline = () => {
+  return (
+    <div className="relative">
+      {/* Horizontal line connecting all items */}
+      <div className="absolute top-3 left-0 right-0 h-px bg-zinc-300 dark:bg-zinc-600" />
+      
+      <div className="flex justify-between">
+        {timelineItems.map((item, index) => (
+          <div key={index} className="relative flex flex-col items-center">
+            {/* Dot */}
+            <div
+              className={`relative z-10 size-6 rounded-full border-2 ${
+                item.active
+                  ? "border-sky-500 bg-sky-500 dark:border-sky-600 dark:bg-sky-600"
+                  : "border-zinc-400 bg-zinc-50 dark:border-zinc-500 dark:bg-zinc-900"
+              }`}
+            >
+              {item.active && (
+                <div className="absolute inset-0 animate-ping rounded-full bg-sky-500 opacity-25 dark:bg-sky-600" />
+              )}
+            </div>
+            
+            {/* Content */}
+            <div className="mt-3 flex flex-col items-center text-center">
+              <span
+                className={`text-[11px] font-medium sm:text-xs ${
+                  item.active
+                    ? "text-sky-600 dark:text-sky-500"
+                    : "text-zinc-700 dark:text-zinc-300"
+                }`}
+              >
+                {item.title}
+              </span>
+              <span className="mt-0.5 text-[10px] text-zinc-500 dark:text-zinc-400 max-sm:hidden">
+                {item.subtitle}
+              </span>
+              <span className="mt-0.5 text-[10px] text-zinc-400 dark:text-zinc-500">
+                {item.period}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-6">
@@ -91,6 +169,9 @@ export default function HomePage() {
         with .NET, C#, Java, and Spring Boot. Passionate about building robust solutions and 
         always eager to learn and take on new challenges.
       </p>
+
+      {/* Timeline */}
+      <Timeline />
       <div className="divide-y divide-zinc-400 overflow-hidden rounded ring-1 ring-zinc-400 dark:divide-zinc-500 dark:ring-zinc-500">
         {externalLinks.map((link: Link) => (
           <ExternalLink key={link.url} {...link} />
