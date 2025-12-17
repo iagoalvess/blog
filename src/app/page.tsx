@@ -85,10 +85,11 @@ const ExternalLink = (link: Link) => {
 export default function HomePage() {
   return (
     <div className="flex flex-col gap-6">
-      <p className="text-sm">
-        Information Systems student at UFMG with a solid background in software development. 
-        Currently interning at Group Software, focusing on backend and system integrations. 
-        Always eager to learn and take on new challenges.
+      <p className="text-sm text-justify">
+        Junior Software Engineer based in Belo Horizonte, finishing my degree in Information Systems at UFMG. 
+        Currently working at Group Software, focusing on backend development and system integrations 
+        with .NET, C#, Java, and Spring Boot. Passionate about building robust solutions and 
+        always eager to learn and take on new challenges.
       </p>
       <div className="divide-y divide-zinc-400 overflow-hidden rounded ring-1 ring-zinc-400 dark:divide-zinc-500 dark:ring-zinc-500">
         {externalLinks.map((link: Link) => (

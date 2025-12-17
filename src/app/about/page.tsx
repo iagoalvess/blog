@@ -4,18 +4,18 @@ export default function AboutPage() {
       <h1 className="mb-16 mt-4 text-center text-5xl max-sm:text-4xl">
         About me
       </h1>
-      <article className="space-y-4">
+      <article className="space-y-4 text-justify">
         <p>
-          I was born in Santa Bárbara, MG, and moved to Belo Horizonte to pursue my studies. 
-          I&apos;ve always been passionate about sports, having competed in mountain biking and motocross, 
-          which taught me a lot about discipline and perseverance.
+          I live in Belo Horizonte, MG. I&apos;ve always been passionate about sports, 
+          having competed in mountain biking and motocross, which taught me a lot about 
+          discipline and perseverance.
         </p>
         <p>
           Since a young age, I&apos;ve been fascinated by computers and technology. 
           My natural curiosity and enjoyment in solving problems led me to pursue a career in this field.
         </p>
         <p>
-          I&apos;m currently in the 8th semester of my Information Systems degree at{" "}
+          I&apos;m currently finishing my Information Systems degree at{" "}
           <a
             href="https://ufmg.br/"
             target="_blank"
@@ -32,10 +32,10 @@ export default function AboutPage() {
           build dashboards, automate processes, manage projects, and interact directly with clients.
         </p>
         <p>
-          Today, I&apos;m a Software Development Intern at{" "}
-          <strong>Group Software</strong>, focusing on backend and system integrations. 
-          I work on maintaining and evolving complex systems, developing new features, 
-          and fixing bugs using technologies like Java, Spring, C#, and SQL Server.
+          I then joined <strong>Group Software</strong> as a Software Development Intern, 
+          focusing on backend and system integrations. After my internship, I was promoted to 
+          Junior Software Engineer, where I continue working on maintaining and evolving complex systems, 
+          developing new features, and fixing bugs using technologies like .NET, C#, Java, Spring Boot, and SQL Server.
         </p>
         <p>
           I&apos;m a growing professional who proactively seeks new challenges, constantly improving 

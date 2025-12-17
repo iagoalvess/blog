@@ -56,7 +56,7 @@ export default function Header() {
           <div className="flex flex-col max-sm:items-center">
             Iago Alves
             <span className="text-zinc-500 dark:text-zinc-400">
-              Software Developer
+              Software Engineer
             </span>
           </div>
         </Link>
