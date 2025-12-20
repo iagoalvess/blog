@@ -11,6 +11,24 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: "wifi-bh",
+    description: "Web application for managing public Wi-Fi points in Belo Horizonte. Users can add new points, rate existing ones with stars, import data from PBH CSV files, and view all registered points with coordinates and ratings.",
+    githubUrl: "https://github.com/iagoalvess/wifibh",
+    technologies: (
+      <div className="flex items-center gap-x-3">
+        <span className="rounded-full bg-[#512BD4] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          .NET
+        </span>
+        <span className="rounded-full bg-[#336791] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          PostgreSQL
+        </span>
+        <span className="rounded-full bg-[#336791] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          PostGIS
+        </span>
+      </div>
+    ),
+  },
+  {
     name: "bustracker",
     description:
       "Real-time bus tracking system for Belo Horizonte, using public API data from PBH (Prefeitura de Belo Horizonte). It includes a REST API for querying stops, lines and arrival predictions, a background worker for collecting real-time bus positions, and a GTFS data importer.",
