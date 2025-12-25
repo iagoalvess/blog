@@ -163,6 +163,21 @@ const projects: Project[] = [
       </div>
     ),
   },
+  {
+    name: "investimentos",
+    description: "A RESTful API for managing financial investments. Allows registering investments, calculating estimated returns, and viewing dashboards with summaries and charts.",
+    githubUrl: "https://github.com/iagoalvess/investimentos",
+    technologies: (
+      <div className="flex items-center gap-x-3">
+        <span className="rounded-full bg-[#512BD4] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          .NET
+        </span>
+        <span className="rounded-full bg-[#336791] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          PostgreSQL
+        </span>
+      </div>
+    ),
+  },
 ];
 
 function ProjectCard({
