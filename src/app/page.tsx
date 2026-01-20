@@ -6,6 +6,7 @@ import {
 import { ArrowUpRight, Copy, Download, Send } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
+import Translate from "../components/Translate";
 
 const XLogo = () => {
   return (
@@ -40,7 +41,7 @@ const RaycastLogo = () => {
 
 interface Link {
   name: string;
-  description?: string;
+  descriptionKey?: string;
   url: string;
   icon?: ReactNode;
 }
@@ -48,13 +49,13 @@ interface Link {
 const externalLinks: Link[] = [
   {
     name: "LinkedIn",
-    description: "follow my career",
+    descriptionKey: "external.linkedin",
     url: "https://www.linkedin.com/in/iago-alvess",
     icon: <SiLinkedin className="fill-[#0077B5] dark:fill-zinc-200" />,
   },
   {
     name: "GitHub",
-    description: "view my code",
+    descriptionKey: "external.github",
     url: "https://github.com/iagoalvess",
     icon: <SiGithub />,
   },
@@ -63,7 +64,7 @@ const externalLinks: Link[] = [
 const ExternalLink = (link: Link) => {
   return (
     <a
-      key={link.description}
+      key={link.url}
       href={link.url}
       target="_blank"
       className="group flex items-center justify-between p-4 transition-all sm:hover:bg-zinc-200 sm:dark:hover:bg-zinc-800"
@@ -71,7 +72,7 @@ const ExternalLink = (link: Link) => {
       <span className="flex items-center gap-4">
         {link.icon} {link.name}
         <span className="-translate-x-4 text-zinc-500 opacity-0 transition-all max-sm:hidden sm:group-hover:translate-x-0 sm:group-hover:opacity-100 dark:text-zinc-400">
-          {link.description}
+          {link.descriptionKey ? <Translate id={link.descriptionKey} /> : null}
         </span>
       </span>
       <ArrowUpRight
@@ -91,24 +92,24 @@ interface TimelineItem {
 
 const timelineItems: TimelineItem[] = [
   {
-    title: "Information Systems",
-    subtitle: "UFMG",
-    period: "2022 - Present",
+    title: "timeline.item1.title",
+    subtitle: "timeline.item1.subtitle",
+    period: "timeline.item1.period",
   },
   {
-    title: "Project Analyst",
-    subtitle: "Pi Júnior - UFMG",
-    period: "2024 - 2025",
+    title: "timeline.item2.title",
+    subtitle: "timeline.item2.subtitle",
+    period: "timeline.item2.period",
   },
   {
-    title: "Intern",
-    subtitle: "Group Software",
-    period: "2024 - 2025",
+    title: "timeline.item3.title",
+    subtitle: "timeline.item3.subtitle",
+    period: "timeline.item3.period",
   },
   {
-    title: "Software Engineer",
-    subtitle: "Group Software",
-    period: "2026 - Present",
+    title: "timeline.item4.title",
+    subtitle: "timeline.item4.subtitle",
+    period: "timeline.item4.period",
     active: true,
   },
 ];
@@ -144,13 +145,13 @@ const Timeline = () => {
                     : "text-zinc-700 dark:text-zinc-300"
                 }`}
               >
-                {item.title}
+                <Translate id={item.title} />
               </span>
               <span className="mt-0.5 text-[10px] text-zinc-500 dark:text-zinc-400 max-sm:hidden">
-                {item.subtitle}
+                <Translate id={item.subtitle} />
               </span>
               <span className="mt-0.5 text-[10px] text-zinc-400 dark:text-zinc-500">
-                {item.period}
+                <Translate id={item.period} />
               </span>
             </div>
           </div>
@@ -164,10 +165,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col gap-6">
       <p className="text-sm text-justify">
-        Junior Software Engineer based in Belo Horizonte, finishing my degree in Information Systems at UFMG. 
-        Currently working at Group Software, focusing on backend development and system integrations 
-        with .NET, C#, Java, and Spring Boot. Passionate about building robust solutions and 
-        always eager to learn and take on new challenges.
+        <Translate id="home.intro" />
       </p>
 
       {/* Timeline */}
@@ -196,7 +194,7 @@ export default function HomePage() {
           </div>
           <span className="-mt-2 inline-flex w-fit items-center gap-1 rounded-full bg-green-100 px-2 py-0.5 text-sm text-green-600 ring-1 ring-green-500 dark:bg-transparent dark:text-emerald-500 dark:ring-emerald-500">
             <div className="size-2 animate-pulse rounded-full bg-green-500 dark:bg-emerald-500" />
-            Online
+            <Translate id="home.online" />
           </span>
         </div>
         <div className="flex flex-col gap-2">
@@ -205,7 +203,9 @@ export default function HomePage() {
             download="IagoAlvesEN.pdf"
             className="flex flex-row items-center justify-center gap-3 rounded bg-sky-300 p-4 text-sky-800 ring-1 ring-sky-500 transition-all sm:hover:bg-sky-400 dark:bg-inherit dark:text-sky-500 dark:ring-sky-500 sm:sm:dark:hover:bg-zinc-800"
           >
-            <span className="text-nowrap">Download my CV</span>
+            <span className="text-nowrap">
+              <Translate id="home.downloadCV" />
+            </span>
             <Download strokeWidth={1.4} className="size-5 max-sm:hidden" />
           </a>
         </div>

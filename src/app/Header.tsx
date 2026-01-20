@@ -4,6 +4,7 @@ import { ChevronLeft, Moon, Sun, Triangle } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { t, setLanguage, getLanguage } from "../lib/i18n";
 
 function isThemeSetToDark() {
   if (window == undefined) return;
@@ -19,6 +20,7 @@ export default function Header() {
   const path = usePathname();
   const isHome = path === "/";
   const [isDarkMode, setIsDarkMode] = useState(isThemeSetToDark());
+  const [lang, setLang] = useState(getLanguage());
 
   useEffect(() => {
     if (isThemeSetToDark()) {
@@ -40,13 +42,19 @@ export default function Header() {
     }
   };
 
+  const toggleLang = () => {
+    const next = lang === "pt" ? "en" : "pt";
+    setLanguage(next as any);
+    setLang(next as any);
+  };
+
   return (
     <header className="mx-auto max-w-prose py-8 max-sm:pt-4">
       <nav className="flex items-center justify-between max-sm:flex-col max-sm:gap-6">
         <Link
           className={`group relative -m-12 -my-2 -mr-4 flex items-center rounded py-2 pl-12 pr-4 ${isHome ? "ring-0" : "ring-1"} ring-sky-500 ring-opacity-0 transition-all max-sm:text-center sm:hover:ring-opacity-100 dark:ring-sky-600 dark:ring-opacity-0`}
           href="/"
-          aria-label="Back to home"
+          aria-label={t("header.aria.backToHome")}
         >
           <div
             className={`${isHome ? "hidden" : "absolute"} left-1 flex size-4 h-full w-12 items-center px-2`}
@@ -54,9 +62,9 @@ export default function Header() {
             <ChevronLeft strokeWidth={1.4} />
           </div>
           <div className="flex flex-col max-sm:items-center">
-            Iago Alves
+            {t("header.name")}
             <span className="text-zinc-500 dark:text-zinc-400">
-              Software Engineer
+              {t("header.role")}
             </span>
           </div>
         </Link>
@@ -64,7 +72,7 @@ export default function Header() {
           <button
             onClick={() => toggleTheme()}
             className="group relative flex items-center"
-            aria-label="Toggle theme"
+            aria-label={t("header.aria.toggleTheme")}
           >
             {isDarkMode ? (
               <Moon
@@ -78,13 +86,20 @@ export default function Header() {
               />
             )}
           </button>
+          <button
+            onClick={() => toggleLang()}
+            className="group relative flex items-center"
+            aria-label={t("header.aria.toggleLang")}
+          >
+            <span className="text-zinc-700 dark:text-zinc-200">{lang.toUpperCase()}</span>
+          </button>
           <Link
             className="group relative rounded px-2 py-px ring-1 ring-sky-500 ring-opacity-0 transition-all sm:hover:ring-opacity-100 dark:ring-sky-600 dark:ring-opacity-0"
             href="/projects"
-            aria-label="View projects"
+            aria-label={t("header.aria.viewProjects")}
             aria-current={path === "/projects" ? "page" : undefined}
           >
-            /projects
+            {t("nav.projects")}
             <Triangle
               aria-hidden="true"
               className="absolute left-1/2 mt-1 hidden size-2 fill-sky-500 text-zinc-800 group-aria-[current=page]:block dark:fill-sky-600 dark:text-transparent"
@@ -93,10 +108,10 @@ export default function Header() {
           <Link
             className="group relative rounded px-2 py-px ring-1 ring-sky-500 ring-opacity-0 transition-all sm:hover:ring-opacity-100 dark:ring-sky-600 dark:ring-opacity-0"
             href="/about"
-            aria-label="View about page"
+            aria-label={t("header.aria.viewAbout")}
             aria-current={path === "/about" ? "page" : undefined}
           >
-            /about
+            {t("nav.about")}
             <Triangle
               aria-hidden="true"
               className="absolute left-1/2 mt-1 hidden size-2 fill-sky-500 text-zinc-800 group-aria-[current=page]:block dark:fill-sky-600 dark:text-transparent"
