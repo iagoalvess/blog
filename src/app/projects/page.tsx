@@ -11,6 +11,21 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: "picodohorizonte",
+    description: "Backend application for a craft beverages portfolio, enabling administrative management of products, categories, and related content. Designed to support an admin dashboard with secure control over catalog data and business rules.",
+    githubUrl: "https://github.com/iagoalvess/picodohorizonte-backend",
+    technologies: (
+      <div className="flex items-center gap-x-3">
+        <span className="rounded-full bg-[#512BD4] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          .NET
+        </span>
+        <span className="rounded-full bg-[#336791] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          PostgreSQL
+        </span>
+      </div>
+    ),
+  },
+  {
     name: "wifi-bh",
     description: "Web application for managing public Wi-Fi points in Belo Horizonte. Users can add new points, rate existing ones with stars, import data from PBH CSV files, and view all registered points with coordinates and ratings.",
     githubUrl: "https://github.com/iagoalvess/wifibh",
@@ -43,6 +58,21 @@ const projects: Project[] = [
         </span>
         <span className="rounded-full bg-[#336791] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
           PostGIS
+        </span>
+      </div>
+    ),
+  },
+    {
+    name: "investimentos",
+    description: "A RESTful API for managing financial investments. Allows registering investments, calculating estimated returns, and viewing dashboards with summaries and charts.",
+    githubUrl: "https://github.com/iagoalvess/investimentos",
+    technologies: (
+      <div className="flex items-center gap-x-3">
+        <span className="rounded-full bg-[#512BD4] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          .NET
+        </span>
+        <span className="rounded-full bg-[#336791] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
+          PostgreSQL
         </span>
       </div>
     ),
@@ -159,21 +189,6 @@ const projects: Project[] = [
       <div className="flex items-center gap-x-3">
         <span className="rounded-full bg-[#00D8FE] px-2.5 py-0.5 text-sm text-zinc-950 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
           Python
-        </span>
-      </div>
-    ),
-  },
-  {
-    name: "investimentos",
-    description: "A RESTful API for managing financial investments. Allows registering investments, calculating estimated returns, and viewing dashboards with summaries and charts.",
-    githubUrl: "https://github.com/iagoalvess/investimentos",
-    technologies: (
-      <div className="flex items-center gap-x-3">
-        <span className="rounded-full bg-[#512BD4] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
-          .NET
-        </span>
-        <span className="rounded-full bg-[#336791] px-2.5 py-0.5 text-sm text-zinc-100 dark:bg-inherit dark:text-inherit dark:ring-1 dark:ring-zinc-500">
-          PostgreSQL
         </span>
       </div>
     ),
