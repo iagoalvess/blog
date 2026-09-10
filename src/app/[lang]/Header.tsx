@@ -65,14 +65,17 @@ export default function Header({ lang }: { lang: Lang }) {
               className="hidden size-5 fill-gray-700 transition-all dark:block"
             />
           </button>
-          <Link
+          {/* <a> e não <Link>: trocar de idioma re-renderiza o layout e o React reescreve
+              o className do <html>, apagando a classe "dark". Recarregar deixa o script
+              de tema reaplicar o tema salvo antes da primeira pintura. */}
+          <a
             href={`/${otherLang}${route === "/" ? "" : route}`}
             className="text-zinc-700 dark:text-zinc-200"
             aria-label={t("header.aria.toggleLang", lang)}
             hrefLang={otherLang}
           >
             {otherLang.toUpperCase()}
-          </Link>
+          </a>
           {navItems.map((item) => (
             <Link
               key={item.path}
